@@ -119,9 +119,9 @@ while i<11:
                 args1.append(([Product_ID,GoDate,day[j],Product_Name,content[j],eat[j],location[j],'回家~']))
     print(args1)
     i+=1
-# sql = "INSERT INTO `tourist_newamazing`(`TourID`, `Day`, `Title`, `GoDate`, `Price`, `Seat`)VALUES(%s,%s,%s,%s,%s,%s)"
+sql = "INSERT INTO `tourist_newamazing`(`TourID`, `Day`, `Title`, `GoDate`, `Price`, `Seat`)VALUES(%s,%s,%s,%s,%s,%s)"
 sql1 = "INSERT INTO `tourist_newamazing_info`(`TourID`, `GoDate`, `Day`, `Title`, `Content`, `Eat`, `Location`, `Hotel`)VALUES(%s,%s,%s,%s,%s,%s,%s,%s)"
-# cursor.executemany(sql, args)
+cursor.executemany(sql, args)
 cursor.executemany(sql1, args1)
 connection.commit()   
 
