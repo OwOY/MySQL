@@ -45,5 +45,5 @@ cursor.execute("SELECT * FROM `Table_Name_A` inner join `Table_Name_B` on `Table
 
 # ----------------------------------------------連結TABLE-------------------------------------------------------------
 
-connection.commit()   
-connection.close()
+connection.commit()    #確認修改
+connection.close()     #關閉連線
