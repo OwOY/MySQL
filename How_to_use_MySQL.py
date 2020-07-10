@@ -14,6 +14,9 @@ cursor = connection.cursor()
 # ----------------------------------------------輸入資料------------------------------------------------------------
 cursor.execute("INSERT INTO `Table_Name`(`Column`) VALUES ([value-1])")
 
+a = 123
+cursor.execute("INSERT INTO `Table_Name`(`Column`) VALUES ([value-1])",(a))
+
 sql = "INSERT INTO `Table_Name`(`Column`, `Column1`, `Column2`) VALUES(%s,%s,%s)"    #上傳Turple+List格式
 args = (['1','2','3'],['4','5','6'])
 cursor.executemany(sql, args)
