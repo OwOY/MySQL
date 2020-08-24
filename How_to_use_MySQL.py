@@ -50,7 +50,10 @@ cursor.execute("DROP TABLE `Table_Name`")
 cursor.execute("SELECT * FROM `Table_Name_A` inner join `Table_Name_B` on `Table_Name_A`.`特定欄位` = `Table_Name_B`.`特定欄位`")
 
 
-# --------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------順序----------------------------------------------------------------
+cursor.execute("SELECT * FROM `Table_Name` ORDER BY '特定欄位' ASC")    #順冪(小到大)
+cursor.execute("SELECT * FROM `Table_Name` ORDER BY '特定欄位' DESC")   #逆冪(大到小)
 
+# --------------------------------------------------------------------------------------------------------------------
 connection.commit()    #確認修改
 connection.close()     #關閉連線
