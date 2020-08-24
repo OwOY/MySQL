@@ -30,6 +30,9 @@ cursor.execute(" SELECT  `Column`  FROM `Table_Name` WHERE  `特定欄位` LIKE 
 
 # ----------------------------------------------選擇更新--------------------------------------------------------------
 cursor.execute("UPDATE `Table_Name` SET `ID`=[value-1] WHERE `特定欄位` == X")
+# ----------------------------------------------更新特定條件的值(XY轉換)-----------------------------------------------
+cursor.execute("UPDATE `Table_Name` SET `特定欄位`= CASE `特定欄位` WHEN 'X' THEN 'Y' ELSE 'X'END;")
+cursor.execute("UPDATE `Table_Name` SET `特定欄位`= CASE `特定欄位` WHEN 'X' THEN 'Y' WHERE 'Y' THEN 'X'END;")
 
 # ----------------------------------------------選擇刪除--------------------------------------------------------------
 cursor.execute("DELETE FROM `Table_Name` WHERE `特定欄位` == X")
@@ -46,7 +49,8 @@ cursor.execute("DROP TABLE `Table_Name`")
 # ----------------------------------------------連結TABLE-------------------------------------------------------------
 cursor.execute("SELECT * FROM `Table_Name_A` inner join `Table_Name_B` on `Table_Name_A`.`特定欄位` = `Table_Name_B`.`特定欄位`")
 
-# ----------------------------------------------連結TABLE-------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------------------------------------
 
 connection.commit()    #確認修改
 connection.close()     #關閉連線
