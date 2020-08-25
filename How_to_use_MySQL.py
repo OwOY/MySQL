@@ -23,10 +23,11 @@ cursor.executemany(sql, args)
 
 # ----------------------------------------------選擇查看--------------------------------------------------------------
 cursor.execute("SELECT * FROM `Table_Name` WHERE `特定欄位` == X")
-cursor.execute("SELECT `ID` FROM `Column` WHERE `特定欄位` == X")
+cursor.execute("SELECT `ID` FROM `Table_Name` WHERE `特定欄位` == X")
 cursor.execute(" SELECT  `Column`  FROM `Table_Name` ORDER BY  `特定欄位` DESC ")          # ASC為升幕   DESC為降幕
 cursor.execute("SELECT  `Column`  FROM `Table_Name` WHERE  `特定欄位` LIKE  'admin' ")     #將內容有admin的取出
 cursor.execute(" SELECT  `Column`  FROM `Table_Name` WHERE  `特定欄位` LIKE  %'adm'% ")    #將內容"含"有adm的資料取出(包括admin、administrator)
+cursor.execute("SELECT `A`.'Name' FROM `Table_Name` AS `A` , `Table_Name` AS `B`")        #暫存Table
 
 # ----------------------------------------------選擇更新--------------------------------------------------------------
 cursor.execute("UPDATE `Table_Name` SET `ID`=[value-1] WHERE `特定欄位` == X")
@@ -49,10 +50,8 @@ cursor.execute("DROP TABLE `Table_Name`")
 # ----------------------------------------------連結TABLE-------------------------------------------------------------
 cursor.execute("SELECT * FROM `Table_Name_A` inner join `Table_Name_B` on `Table_Name_A`.`特定欄位` = `Table_Name_B`.`特定欄位`")
 
-
-# ------------------------------------------------順序----------------------------------------------------------------
-cursor.execute("SELECT * FROM `Table_Name` ORDER BY '特定欄位' ASC")    #順冪(小到大)
-cursor.execute("SELECT * FROM `Table_Name` ORDER BY '特定欄位' DESC")   #逆冪(大到小)
+# ------------------------------------------------尋找重複值-----------------------------------------------------------
+cursor.execute("SELECT * FROM `Table_Name` GROUP BY '特定欄位' having count(*) !=1 ")
 
 # --------------------------------------------------------------------------------------------------------------------
 connection.commit()    #確認修改
