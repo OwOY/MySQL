@@ -26,7 +26,7 @@ cursor.execute("SELECT * FROM `Table_Name` WHERE `特定欄位` == X")
 cursor.execute("SELECT `ID` FROM `Table_Name` WHERE `特定欄位` == X")
 cursor.execute(" SELECT  `Column`  FROM `Table_Name` ORDER BY  `特定欄位` DESC ")          # ASC為升幕   DESC為降幕
 cursor.execute("SELECT  `Column`  FROM `Table_Name` WHERE  `特定欄位` LIKE  'admin' ")     #將內容有admin的取出
-cursor.execute(" SELECT  `Column`  FROM `Table_Name` WHERE  `特定欄位` LIKE  %'adm'% ")    #將內容"含"有adm的資料取出(包括admin、administrator)
+cursor.execute(" SELECT  `Column`  FROM `Table_Name` WHERE  `特定欄位` LIKE  '%adm%' ")    #將內容"含"有adm的資料取出(包括admin、administrator)
 cursor.execute("SELECT `A`.'Name' FROM `Table_Name` AS `A` , `Table_Name` AS `B`")        #暫存Table
 
 # ----------------------------------------------選擇更新--------------------------------------------------------------
