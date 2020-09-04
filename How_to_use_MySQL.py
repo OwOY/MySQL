@@ -10,7 +10,11 @@ connection = pymysql.connect(host='127.0.0.1',
 )
 
 cursor = connection.cursor()
-
+# ----------------------------------------------創建Table----------------------------------------------------------
+cursor.execute("CREATE TABLE Table_Name(column1 TEXT, column2 TEXT PRIMARY KEY)
+               
+# ----------------------------------------------新增欄位------------------------------------------------------------
+cursor.execute("ALTER TABLE Table_Name ADD column TEXT")
 # ----------------------------------------------輸入資料------------------------------------------------------------
 cursor.execute("INSERT INTO `Table_Name`(`Column`) VALUES ([value-1])")
 
