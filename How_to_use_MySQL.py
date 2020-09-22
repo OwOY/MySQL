@@ -18,6 +18,7 @@ cursor.execute("CREATE TABLE new_table LIKE old_db.old_table")
 
 # ----------------------------------------------新增欄位------------------------------------------------------------
 cursor.execute("ALTER TABLE Table_Name ADD column TEXT")
+
 # ----------------------------------------------輸入資料------------------------------------------------------------
 cursor.execute("INSERT INTO `Table_Name`(`Column`) VALUES ([value-1])")
 
@@ -35,6 +36,7 @@ cursor.execute(" SELECT  `Column`  FROM `Table_Name` ORDER BY  `特定欄位` DE
 cursor.execute("SELECT  `Column`  FROM `Table_Name` WHERE  `特定欄位` LIKE  'admin' ")     #將內容有admin的取出
 cursor.execute(" SELECT  `Column`  FROM `Table_Name` WHERE  `特定欄位` LIKE  '%adm%' ")    #將內容"含"有adm的資料取出(包括admin、administrator)
 cursor.execute("SELECT `A`.'Name' FROM `Table_Name` AS `A` , `Table_Name` AS `B`")        #暫存Table
+cursor.execute("Select distinct col_name FROM table_name")                                #查詢特定欄位不同值
 
 # ----------------------------------------------選擇更新--------------------------------------------------------------
 cursor.execute("UPDATE `Table_Name` SET `ID`=[value-1] WHERE `特定欄位` == X")
