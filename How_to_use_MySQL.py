@@ -15,7 +15,7 @@ cursor.execute("CREATE TABLE Table_Name(column1 TEXT, column2 TEXT PRIMARY KEY")
 
 # ----------------------------------------------複製Table----------------------------------------------------------
 cursor.execute("CREATE TABLE new_table LIKE old_table")
-
+cursor.execute("INSERT INTO table `new_table` (Select * from `old_table`)")
 # ----------------------------------------------新增欄位------------------------------------------------------------
 cursor.execute("ALTER TABLE Table_Name ADD column TEXT")
 
