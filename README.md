@@ -1,9 +1,7 @@
 # MySQL
-記錄如何使用MySQL語法  
-以及一些推上MySQL的範例  
+<img><src = "https://upload.wikimedia.org/wikipedia/zh/thumb/6/62/MySQL.svg/1200px-MySQL.svg.png"></img>
   
-  
-若要用變數呼叫TABLE   可使用Python語法   f'{TABLE_NAME}
+
 
 #### ---------------------------------------------連接資料庫-----------------------------------------------------------
 ```
@@ -82,3 +80,5 @@ cursor.execute("SELECT * FROM `Table_Name` GROUP BY '特定欄位' having count(
 #### --------------------------------------------------------------------------------------------------------------------
 connection.commit()    #確認修改  
 connection.close()     #關閉連線  
+
+- 若要用變數呼叫TABLE   可使用Python語法   f'{TABLE_NAME}
