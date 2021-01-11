@@ -78,7 +78,10 @@ cursor.execute("SELECT * FROM `Table_Name_A` inner join `Table_Name_B` on `Table
 cursor.execute("SELECT * FROM `Table_Name` GROUP BY '特定欄位' having count(*) !=1 ")
 ```
 #### --------------------------------------------------------------------------------------------------------------------
-connection.commit()    #確認修改  
-connection.close()     #關閉連線  
+- 確認修改  
+connection.commit()    
+- 關閉連線  
+connection.close()       
 
-- 若要用變數呼叫TABLE   可使用Python語法   f'{TABLE_NAME}
+- 若要用變數呼叫TABLE   可使用Python語法   
+f'{TABLE_NAME}
