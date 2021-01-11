@@ -25,11 +25,11 @@ cursor.execute("CREATE TABLE Table_Name(column1 TEXT, column2 TEXT PRIMARY KEY")
 cursor.execute("CREATE TABLE new_table LIKE old_table")
 cursor.execute("INSERT INTO table `new_table` (Select * from `old_table`)")
 ```
-# ----------------------------------------------新增欄位------------------------------------------------------------
+#### ----------------------------------------------新增欄位------------------------------------------------------------
 ```
 cursor.execute("ALTER TABLE Table_Name ADD column TEXT")
 ```
-# ----------------------------------------------輸入資料------------------------------------------------------------
+#### ----------------------------------------------輸入資料------------------------------------------------------------
 ```
 a = 123
 cursor.execute("INSERT INTO `Table_Name`(`Column`) VALUES ([value-1])",(a))
