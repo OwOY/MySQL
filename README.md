@@ -2,6 +2,9 @@
 <img src="https://upload.wikimedia.org/wikipedia/zh/thumb/6/62/MySQL.svg/1200px-MySQL.svg.png"></img>
   
 
+#### install pymysql  
+------------------------
+python -m pip install pymysql  
 
 #### ---------------------------------------------連接資料庫-----------------------------------------------------------
 ```
