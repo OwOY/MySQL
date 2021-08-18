@@ -56,9 +56,10 @@ cursor.executemany(sql, args)
 cursor.execute("UPDATE `Table_Name` SET `ID`=[value-1] WHERE `特定欄位` == X")
 ```
 - 更新特定條件的值(XY轉換)  
+```
 cursor.execute("UPDATE `Table_Name` SET `特定欄位`= CASE `特定欄位` WHEN 'X' THEN 'Y' ELSE 'X'END;")  
 cursor.execute("UPDATE `Table_Name` SET `特定欄位`= CASE `特定欄位` WHEN 'X' THEN 'Y' WHERE 'Y' THEN 'X'END;")  
-
+```
 - 選擇刪除
 ```
 cursor.execute("DELETE FROM `Table_Name` WHERE `特定欄位` == X")
