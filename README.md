@@ -3,13 +3,25 @@
 </p>  
 
 ------------------------
-
-- Install pymysql  
-
+## Install MySQL
+```
+apt -y install mysql or apt -y install mariadb-server  (Prefer to use mariadb)
+yum -y install mysql or yum -y install mariadb-server  (Prefer to use mariadb)
+```
+## First time set MySQL
+```
+sudo mysql_secure_installation
+```
+## Install pymysql  
 ```
 python -m pip install pymysql  
 ```
-
+## How to use
+### Import
+```
+import pymysql
+```
+## Use case
 - 連接資料庫  
 
 ```
