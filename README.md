@@ -12,6 +12,14 @@ yum -y install mysql or yum -y install mariadb-server  (Prefer to use mariadb)
 ```
 sudo mysql_secure_installation
 ```
+## Set use password to login 
+```
+UPDATE mysql.user SET plugin="mysql_native_password";
+```
+## reset password 
+```
+update user set password = PASSWORD('test') where host = 'localhost'
+```
 ## Install pymysql  
 ```
 python -m pip install pymysql  
