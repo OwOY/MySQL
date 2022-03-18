@@ -114,3 +114,21 @@ connection.close()
 
 - 若要用變數呼叫TABLE   可使用Python語法   
 f'{TABLE_NAME}
+
+# Bonus
+## 選取SQL字段 SUBSTRING
+```
+select substring(f'{column}', 1, 4) from table_name # 取 column 欄位的第一個字，取4位數。 
+```
+>>> 20220318 > 2022
+## 選取所有欄位中最大值 GREATEST
+```
+select * from table_name where GREATEST(column1, column2 , column3) > 90
+```
+|column1|column2|column3|  
+|--|--|--|
+|6|5|2022|
+## 取得欄位為空補值
+```
+select nal(column1, 0), nal(column2, 'test') from table_name
+```
